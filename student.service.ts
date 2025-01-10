@@ -10,11 +10,10 @@ export class StudentService {
     private readonly studentRepository: Repository<Student>,
   ) {}
 
-
   // Fetch all students
   async findAll(): Promise<Student[]> {
     return this.studentRepository.find();
   }
 
- 
+
 }
