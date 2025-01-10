@@ -10,13 +10,8 @@ export class StudentService {
     private readonly studentRepository: Repository<Student>,
   ) {}
 
-  // Update an existing student
-  async update(id: number, studentData: Partial<Student>): Promise<Student> {
-    await this.studentRepository.update(id, studentData);
-    return this.studentRepository.findOne({
-        where: { id },
-    });
+  // Delete a student
+  async remove(id: number): Promise<void> {
+    await this.studentRepository.delete(id);
   }
-
-
 }
