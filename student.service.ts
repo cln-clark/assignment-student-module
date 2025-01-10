@@ -10,6 +10,7 @@ export class StudentService {
     private readonly studentRepository: Repository<Student>,
   ) {}
 
+
   // Delete a student
   async remove(id: number): Promise<void> {
     await this.studentRepository.delete(id);
